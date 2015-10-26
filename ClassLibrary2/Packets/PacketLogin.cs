@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Network
+{
+    [Serializable]
+    public class PacketLogin : Packet
+    {
+        public String username { get; }
+        public String password { get; }
+
+        public PacketLogin(string username, string password)
+        {
+            this.username = username;
+            this.password = password;
+        }
+
+        public override void handleServerSide(ServerInterface serverInterface)
+        {
+            serverInterface.Login(username, password);
+        }
+    }
+}

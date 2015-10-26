@@ -1,0 +1,98 @@
+D:\avans\Jaar 2\Periode 1\RHCAPP\CycleMasterPro2000\Video\bin\Debug\Video.exe.config
+D:\avans\Jaar 2\Periode 1\RHCAPP\CycleMasterPro2000\Video\bin\Debug\Video.exe
+D:\avans\Jaar 2\Periode 1\RHCAPP\CycleMasterPro2000\Video\bin\Debug\Video.pdb
+D:\avans\Jaar 2\Periode 1\RHCAPP\CycleMasterPro2000\Video\bin\Debug\Interop.WMPLib.dll
+D:\avans\Jaar 2\Periode 1\RHCAPP\CycleMasterPro2000\Video\bin\Debug\AxInterop.WMPLib.dll
+D:\avans\Jaar 2\Periode 1\RHCAPP\CycleMasterPro2000\Video\obj\Debug\Interop.WMPLib.dll
+D:\avans\Jaar 2\Periode 1\RHCAPP\CycleMasterPro2000\Video\obj\Debug\AxInterop.WMPLib.dll
+D:\avans\Jaar 2\Periode 1\RHCAPP\CycleMasterPro2000\Video\obj\Debug\Video.csproj.ResolveComReference.cache
+D:\avans\Jaar 2\Periode 1\RHCAPP\CycleMasterPro2000\Video\obj\Debug\Video.VideoPlayer.resources
+D:\avans\Jaar 2\Periode 1\RHCAPP\CycleMasterPro2000\Video\obj\Debug\Video.Properties.Resources.resources
+D:\avans\Jaar 2\Periode 1\RHCAPP\CycleMasterPro2000\Video\obj\Debug\Video.csproj.GenerateResource.Cache
+D:\avans\Jaar 2\Periode 1\RHCAPP\CycleMasterPro2000\Video\obj\Debug\Video.exe
+D:\avans\Jaar 2\Periode 1\RHCAPP\CycleMasterPro2000\Video\obj\Debug\Video.pdb
+C:\Users\Beer\Documents\GitHub\fiets\CycleMasterPro2000\Video\bin\Debug\Video.exe.config
+C:\Users\Beer\Documents\GitHub\fiets\CycleMasterPro2000\Video\bin\Debug\Video.exe
+C:\Users\Beer\Documents\GitHub\fiets\CycleMasterPro2000\Video\bin\Debug\Video.pdb
+C:\Users\Beer\Documents\GitHub\fiets\CycleMasterPro2000\Video\bin\Debug\Interop.WMPLib.dll
+C:\Users\Beer\Documents\GitHub\fiets\CycleMasterPro2000\Video\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Beer\Documents\GitHub\fiets\CycleMasterPro2000\Video\obj\Debug\Video.csprojResolveAssemblyReference.cache
+C:\Users\Beer\Documents\GitHub\fiets\CycleMasterPro2000\Video\obj\Debug\Interop.WMPLib.dll
+C:\Users\Beer\Documents\GitHub\fiets\CycleMasterPro2000\Video\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Beer\Documents\GitHub\fiets\CycleMasterPro2000\Video\obj\Debug\Video.csproj.ResolveComReference.cache
+C:\Users\Beer\Documents\GitHub\fiets\CycleMasterPro2000\Video\obj\Debug\Video.VideoPlayer.resources
+C:\Users\Beer\Documents\GitHub\fiets\CycleMasterPro2000\Video\obj\Debug\Video.Properties.Resources.resources
+C:\Users\Beer\Documents\GitHub\fiets\CycleMasterPro2000\Video\obj\Debug\Video.csproj.GenerateResource.Cache
+C:\Users\Beer\Documents\GitHub\fiets\CycleMasterPro2000\Video\obj\Debug\Video.exe
+C:\Users\Beer\Documents\GitHub\fiets\CycleMasterPro2000\Video\obj\Debug\Video.pdb
+C:\Users\Bilel\Source\Repos\CycleMasterPro2000\Video\bin\Debug\Video.exe.config
+C:\Users\Bilel\Source\Repos\CycleMasterPro2000\Video\bin\Debug\Video.exe
+C:\Users\Bilel\Source\Repos\CycleMasterPro2000\Video\bin\Debug\Video.pdb
+C:\Users\Bilel\Source\Repos\CycleMasterPro2000\Video\bin\Debug\Interop.WMPLib.dll
+C:\Users\Bilel\Source\Repos\CycleMasterPro2000\Video\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Bilel\Source\Repos\CycleMasterPro2000\Video\obj\Debug\Video.csprojResolveAssemblyReference.cache
+C:\Users\Bilel\Source\Repos\CycleMasterPro2000\Video\obj\Debug\Interop.WMPLib.dll
+C:\Users\Bilel\Source\Repos\CycleMasterPro2000\Video\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Bilel\Source\Repos\CycleMasterPro2000\Video\obj\Debug\Video.csproj.ResolveComReference.cache
+C:\Users\Bilel\Source\Repos\CycleMasterPro2000\Video\obj\Debug\Video.VideoPlayer.resources
+C:\Users\Bilel\Source\Repos\CycleMasterPro2000\Video\obj\Debug\Video.Properties.Resources.resources
+C:\Users\Bilel\Source\Repos\CycleMasterPro2000\Video\obj\Debug\Video.csproj.GenerateResource.Cache
+C:\Users\Bilel\Source\Repos\CycleMasterPro2000\Video\obj\Debug\Video.exe
+C:\Users\Bilel\Source\Repos\CycleMasterPro2000\Video\obj\Debug\Video.pdb
+C:\Users\rene\Documents\CycleMasterPro2000\Video\bin\Debug\Video.exe.config
+C:\Users\rene\Documents\CycleMasterPro2000\Video\bin\Debug\Video.exe
+C:\Users\rene\Documents\CycleMasterPro2000\Video\bin\Debug\Video.pdb
+C:\Users\rene\Documents\CycleMasterPro2000\Video\bin\Debug\Interop.WMPLib.dll
+C:\Users\rene\Documents\CycleMasterPro2000\Video\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\rene\Documents\CycleMasterPro2000\Video\obj\Debug\Video.csprojResolveAssemblyReference.cache
+C:\Users\rene\Documents\CycleMasterPro2000\Video\obj\Debug\Interop.WMPLib.dll
+C:\Users\rene\Documents\CycleMasterPro2000\Video\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\rene\Documents\CycleMasterPro2000\Video\obj\Debug\Video.csproj.ResolveComReference.cache
+C:\Users\rene\Documents\CycleMasterPro2000\Video\obj\Debug\Video.VideoPlayer.resources
+C:\Users\rene\Documents\CycleMasterPro2000\Video\obj\Debug\Video.Properties.Resources.resources
+C:\Users\rene\Documents\CycleMasterPro2000\Video\obj\Debug\Video.csproj.GenerateResource.Cache
+C:\Users\rene\Documents\CycleMasterPro2000\Video\obj\Debug\Video.exe
+C:\Users\rene\Documents\CycleMasterPro2000\Video\obj\Debug\Video.pdb
+C:\Users\Beer-msi\Documents\GitHub\CycleMasterPro2000\Video\bin\Debug\Video.exe.config
+C:\Users\Beer-msi\Documents\GitHub\CycleMasterPro2000\Video\bin\Debug\Video.exe
+C:\Users\Beer-msi\Documents\GitHub\CycleMasterPro2000\Video\bin\Debug\Video.pdb
+C:\Users\Beer-msi\Documents\GitHub\CycleMasterPro2000\Video\bin\Debug\Interop.WMPLib.dll
+C:\Users\Beer-msi\Documents\GitHub\CycleMasterPro2000\Video\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Beer-msi\Documents\GitHub\CycleMasterPro2000\Video\obj\Debug\Video.csprojResolveAssemblyReference.cache
+C:\Users\Beer-msi\Documents\GitHub\CycleMasterPro2000\Video\obj\Debug\Interop.WMPLib.dll
+C:\Users\Beer-msi\Documents\GitHub\CycleMasterPro2000\Video\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Beer-msi\Documents\GitHub\CycleMasterPro2000\Video\obj\Debug\Video.csproj.ResolveComReference.cache
+C:\Users\Beer-msi\Documents\GitHub\CycleMasterPro2000\Video\obj\Debug\Video.VideoPlayer.resources
+C:\Users\Beer-msi\Documents\GitHub\CycleMasterPro2000\Video\obj\Debug\Video.Properties.Resources.resources
+C:\Users\Beer-msi\Documents\GitHub\CycleMasterPro2000\Video\obj\Debug\Video.csproj.GenerateResource.Cache
+C:\Users\Beer-msi\Documents\GitHub\CycleMasterPro2000\Video\obj\Debug\Video.exe
+C:\Users\Beer-msi\Documents\GitHub\CycleMasterPro2000\Video\obj\Debug\Video.pdb
+D:\avans\Jaar 2\Periode 1\RHCAPP\CycleMasterPro2000\Video\obj\Debug\Video.csprojResolveAssemblyReference.cache
+C:\Users\rene\Desktop\CycleMasterPro2000\Video\bin\Debug\Video.exe.config
+C:\Users\rene\Desktop\CycleMasterPro2000\Video\bin\Debug\Video.exe
+C:\Users\rene\Desktop\CycleMasterPro2000\Video\bin\Debug\Video.pdb
+C:\Users\rene\Desktop\CycleMasterPro2000\Video\bin\Debug\Interop.WMPLib.dll
+C:\Users\rene\Desktop\CycleMasterPro2000\Video\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\rene\Desktop\CycleMasterPro2000\Video\obj\Debug\Video.csprojResolveAssemblyReference.cache
+C:\Users\rene\Desktop\CycleMasterPro2000\Video\obj\Debug\Interop.WMPLib.dll
+C:\Users\rene\Desktop\CycleMasterPro2000\Video\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\rene\Desktop\CycleMasterPro2000\Video\obj\Debug\Video.csproj.ResolveComReference.cache
+C:\Users\rene\Desktop\CycleMasterPro2000\Video\obj\Debug\Video.VideoPlayer.resources
+C:\Users\rene\Desktop\CycleMasterPro2000\Video\obj\Debug\Video.Properties.Resources.resources
+C:\Users\rene\Desktop\CycleMasterPro2000\Video\obj\Debug\Video.csproj.GenerateResource.Cache
+C:\Users\rene\Desktop\CycleMasterPro2000\Video\obj\Debug\Video.exe
+C:\Users\rene\Desktop\CycleMasterPro2000\Video\obj\Debug\Video.pdb
+D:\CycleMasterPro2000\Video\bin\Debug\Video.exe.config
+D:\CycleMasterPro2000\Video\bin\Debug\Video.exe
+D:\CycleMasterPro2000\Video\bin\Debug\Video.pdb
+D:\CycleMasterPro2000\Video\bin\Debug\Interop.WMPLib.dll
+D:\CycleMasterPro2000\Video\bin\Debug\AxInterop.WMPLib.dll
+D:\CycleMasterPro2000\Video\obj\Debug\Video.csprojResolveAssemblyReference.cache
+D:\CycleMasterPro2000\Video\obj\Debug\Interop.WMPLib.dll
+D:\CycleMasterPro2000\Video\obj\Debug\AxInterop.WMPLib.dll
+D:\CycleMasterPro2000\Video\obj\Debug\Video.csproj.ResolveComReference.cache
+D:\CycleMasterPro2000\Video\obj\Debug\Video.VideoPlayer.resources
+D:\CycleMasterPro2000\Video\obj\Debug\Video.Properties.Resources.resources
+D:\CycleMasterPro2000\Video\obj\Debug\Video.csproj.GenerateResource.Cache
+D:\CycleMasterPro2000\Video\obj\Debug\Video.exe
+D:\CycleMasterPro2000\Video\obj\Debug\Video.pdb
