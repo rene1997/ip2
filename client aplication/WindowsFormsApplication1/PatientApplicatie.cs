@@ -404,13 +404,6 @@ namespace WindowsFormsApplication1
             chat(text, username, receiver);
         }
 
-
-        public void chat(string text, string username, string receiver)
-        {
-            network.sendChatMessage(text, username, receiver);
-            RTBChatText.Text += username + ": " + text + System.Environment.NewLine;
-        }
-
         private void saveFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             network.sendSaveData();     
@@ -449,6 +442,12 @@ namespace WindowsFormsApplication1
             sendButton.Enabled = state;
             connectedUsers.Enabled = state;
         }
+
+        public void chat(string text, string username, string receiver)
+        {
+            network.sendChatMessage(text, username, receiver);
+            RTBChatText.Text += username + ": " + text + System.Environment.NewLine;
+        }
     } 
 
    public class astrandClass
@@ -468,7 +467,9 @@ namespace WindowsFormsApplication1
 
         public void Method()
         {
-            
+            form1.Toggle(false);
+            form1.chat("Astrand test is gestart", "System", usrname);
+
         }
     }
 }
