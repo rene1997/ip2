@@ -401,10 +401,14 @@ namespace WindowsFormsApplication1
                 receiver = currentUser.username;
             else
                 receiver = username;
+            chat(text, username, receiver);
+        }
 
+
+        public void chat(string text, string username, string receiver)
+        {
             network.sendChatMessage(text, username, receiver);
             RTBChatText.Text += username + ": " + text + System.Environment.NewLine;
-
         }
 
         private void saveFileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -430,26 +434,37 @@ namespace WindowsFormsApplication1
         private void BStartTraining_Click(object sender, EventArgs e)
         {
             var a = new astrandClass(this);
+            a.setvars(currentUser.username);
             Thread t = new Thread(new ThreadStart(a.Method));
             t.Start();
-
-            
         }
 
         public void Methode2(string string1, string string2, string string3, string string4)
         {
             network.sendBikeValues(string1, string2, string3, string4);
         }
+
+        public void Toggle(bool state)
+        {
+            sendButton.Enabled = state;
+            connectedUsers.Enabled = state;
+        }
     } 
 
    public class astrandClass
     {
         private FormClient form1;
+       private string usrname;
 
         public astrandClass(FormClient form1)
         {
             this.form1 = form1;
         }
+
+       public void setvars(string patientname)
+       {
+           this.usrname = patientname;
+       }
 
         public void Method()
         {
