@@ -42,17 +42,4 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# vs files
-.exe
-.pdb
-.cache
-.suo
-server application/obj/Debug/server application.csproj.FileListAbsolute.txt
-server application/obj/Debug/server application.csproj.FileListAbsolute.txt
-*.suo
-.vs/WindowsFormsApplication1/v14/.suo
-*.suo
-*.cache
-*.sln
-client aplication/Video/45MinWorkout.mp4
-*.mp4
+
