@@ -401,7 +401,10 @@ namespace WindowsFormsApplication1
                 receiver = currentUser.username;
             else
                 receiver = username;
-            chat(text, username, receiver);
+
+            network.sendChatMessage(text, username, receiver);
+            RTBChatText.Text += username + ": " + text + System.Environment.NewLine;
+
         }
 
         private void saveFileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -453,17 +456,17 @@ namespace WindowsFormsApplication1
    public class astrandClass
     {
         private FormClient form1;
-       private string usrname;
+        private string usrname;
 
         public astrandClass(FormClient form1)
         {
             this.form1 = form1;
         }
 
-       public void setvars(string patientname)
-       {
-           this.usrname = patientname;
-       }
+        public void setvars(string patientname)
+        {
+            this.usrname = patientname;
+        }
 
         public void Method()
         {
