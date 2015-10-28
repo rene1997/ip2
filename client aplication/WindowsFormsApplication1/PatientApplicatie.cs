@@ -442,14 +442,32 @@ namespace WindowsFormsApplication1
 
         public void Toggle(bool state)
         {
-            sendButton.Enabled = state;
-            connectedUsers.Enabled = state;
+            // Invoke nodig?
+            if (sendButton.InvokeRequired || connectedUsers.InvokeRequired)
+            {
+                sendButton.Invoke((MethodInvoker)delegate
+                {
+                    sendButton.Enabled = state;
+                });
+                connectedUsers.Invoke((MethodInvoker)delegate
+                {
+                    connectedUsers.Enabled = state;
+                });
+            }
+           
         }
 
         public void chat(string text, string username, string receiver)
         {
             network.sendChatMessage(text, username, receiver);
-            RTBChatText.Text += username + ": " + text + System.Environment.NewLine;
+            if (RTBChatText.InvokeRequired)
+            {
+                RTBChatText.Invoke((MethodInvoker)delegate
+                {
+                    RTBChatText.Text += username + ": " + text + System.Environment.NewLine;
+                });
+            }
+           
         }
     } 
 
