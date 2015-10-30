@@ -469,12 +469,23 @@ namespace WindowsFormsApplication1
             }
            
         }
-    } 
 
-   public class astrandClass
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        public System.Windows.Forms.Timer GetTimer()
+        {
+            return timer1;
+        }
+    }
+
+    public class astrandClass
     {
         private FormClient form1;
         private string usrname;
+        private System.Windows.Forms.Timer _timer;
 
         public astrandClass(FormClient form1)
         {
@@ -489,6 +500,7 @@ namespace WindowsFormsApplication1
         public void Method()
         {
             form1.Toggle(false);
+            this._timer = form1.GetTimer();
             form1.chat("Astrand test is gestart", "System", usrname);
 
         }

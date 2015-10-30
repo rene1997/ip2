@@ -108,3 +108,6 @@ D:\CycleMasterPro2000\server application\obj\Debug\server application.pdb
 C:\Users\rene\Documents\GitHub\ip2\server application\bin\Debug\server application.exe.config
 C:\Users\rene\Documents\GitHub\ip2\server application\obj\Debug\server application.exe
 C:\Users\rene\Documents\GitHub\ip2\server application\obj\Debug\server application.pdb
+C:\Users\jeroen\Desktop\school\ip2\server application\bin\Debug\server application.exe.config
+C:\Users\jeroen\Desktop\school\ip2\server application\obj\Debug\server application.exe
+C:\Users\jeroen\Desktop\school\ip2\server application\obj\Debug\server application.pdb
