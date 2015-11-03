@@ -254,14 +254,14 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(268, 186);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(793, 212);
+            this.listBox1.Size = new System.Drawing.Size(540, 212);
             this.listBox1.TabIndex = 45;
             // 
             // OldSesionData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1073, 410);
+            this.ClientSize = new System.Drawing.Size(820, 420);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.requestedPowerLabel);
             this.Controls.Add(this.label_RequestedPower);

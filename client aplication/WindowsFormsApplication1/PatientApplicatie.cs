@@ -377,7 +377,7 @@ namespace WindowsFormsApplication1
 
         private void viewOldDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new OldSesionData(network,currentUser);
+            Form f = new OldSesionData(network, (UserClient)currentUser);
             f.Show();
 
         }

@@ -41,11 +41,10 @@ namespace server_application
             ServerClient boefje2 = new ServerClient(null, this);
             boefje2.user = new UserClient("Boef2", "lol");
             ConnectedClients.Add(boefje2);
-            Physician jaap = new Physician("Jaap", "appel");
-            jaap.addClient(boefje);
-            users.Add(jaap);*/
+            Physician jaap = new Physician("Jaap", "appel", true);
+            users.Add(jaap);
 
-            //SaveAllData();
+            SaveAllData();*/
 
             TcpListener listener = new TcpListener(IPAddress.Any, 130);
             listener.Start();
