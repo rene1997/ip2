@@ -496,6 +496,8 @@ namespace WindowsFormsApplication1
                 RTBChatText.Invoke((MethodInvoker)delegate
                 {
                     RTBChatText.Text += username + ": " + text + System.Environment.NewLine;
+                    RTBChatText.SelectionStart = RTBChatText.Text.Length;
+                    RTBChatText.ScrollToCaret();
                 });
             }
            
