@@ -58,7 +58,7 @@ namespace Network
 
         public void addSession(DateTime startedDate, trainingen training)
         {
-            Session s = new Session(startedDate, training);
+            Session s = new Session(startedDate, training, sessions.Count + 1);
             sessions.Add(s);
         }
 
@@ -82,7 +82,7 @@ namespace Network
         public Session lastSession()
         {
             if (sessions.Count == 0)
-                sessions.Add(new Session(DateTime.Now, trainingen.other));
+                sessions.Add(new Session(DateTime.Now, trainingen.other, sessions.Count +1));
 
             return sessions.Last();
         }

@@ -377,7 +377,7 @@ namespace WindowsFormsApplication1
 
         private void viewOldDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form f = new OldSesionData(network,username);
+            Form f = new OldSesionData(network,currentUser);
             f.Show();
 
         }
@@ -445,6 +445,21 @@ namespace WindowsFormsApplication1
 
         private void BStartTraining_Click(object sender, EventArgs e)
         {
+            if(bike == null)
+            {
+                bike = new Bike(3.ToString());
+                // modelLabel.Text = bike.GetModel();
+                while (modelLabel.Text.Equals("ERROR") || modelLabel.Text.Equals(""))
+                    modelLabel.Text = bike.GetModel();
+                //versionLabel.Text = bike.GetVersionNumber();
+                while (versionLabel.Text.Equals("ERROR") || versionLabel.Text.Equals(""))
+                    versionLabel.Text = bike.GetVersionNumber();
+                statusLabel.Text = bike.GetStatus();
+                Thread refreshThread = new Thread(new ThreadStart(RefreshThread));
+                refreshThread.IsBackground = true;
+                refreshThread.Start();
+            }
+
             training = trainingen.newAstrand;
             Thread t = new Thread(new ThreadStart(Astrand));
             t.IsBackground = true;

@@ -60,14 +60,14 @@ namespace Network
 
         public override string ToString()
         {
-            return "pulse: \t" + pulse +
-                   "\nrpm: \t" + rpm +
-                   "\nspeed: \t" + speed +
-                   "\ndistance: \t" + distance +
-                   "\nrequested power: \t" + requested_power +
-                   "\nenergy: \t" + energy +
-                   "\nactual power: \t" + actual_power +
-                   "\ntime: \t" + time;
+            return "pulse: " + pulse +
+                   "\n \trpm:" + rpm +
+                   "\n \tspeed: " + speed + "  " +
+                   "\n \tdistance: " + distance +
+                   "\n \trequested power: " + requested_power +
+                   "\n \tenergy: " + energy + "  " +
+                   "\n \tactual power: " + actual_power +
+                   "\n \ttime: " + time;
         }
     }
 }

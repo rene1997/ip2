@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,19 +15,19 @@ namespace WindowsFormsApplication1
     public partial class OldSesionData : Form
     {
         Networkconnect network;
-        Network.User user;
+        UserClient user;
         bool isPhysician;
         int depth = 0;
         List<UserClient> users;
-        List<Session> sesions;
         List<Measurement> measurements;
-        public OldSesionData(Networkconnect network, string username)
+        public OldSesionData(Networkconnect network, User user)
         {
             this.network = network;
+            this.user = (UserClient)user;
             InitializeComponent();
-            user = network.getUser(username);
             if (user is Physician)
             {
+                //todo
                 Physician p = (Physician)user;
                 listBox_Data.DataSource = p.clients;
                 users = p.clients;
@@ -36,6 +37,7 @@ namespace WindowsFormsApplication1
             {
                 UserClient a = (UserClient)user;
                 listBox_Data.DataSource = a.sessions;
+                Debug.WriteLine("aantal sessies: " + a.sessions.Count.ToString());
                 isPhysician = false;
             }
 
@@ -95,35 +97,20 @@ namespace WindowsFormsApplication1
         {
             
             int temp = listBox_Data.SelectedIndex;
+            
             if (temp >=0)
             {
                 if (isPhysician)
                 {
-                    if (depth == 0)
-                    {
-                        UserClient tempc = users.ElementAt(temp);
-                        listBox_Data.DataSource = tempc.getSessions();
-                        sesions = tempc.getSessions();
-                        depth++;
-                    }
-                    else if (depth == 1)
-                    {
-                        Session tempc = sesions.ElementAt(temp);
-                        listBox_Data.DataSource = tempc.getMeasurement();
-                        measurements = tempc.getMeasurement();
-                        depth++;
-                    }
+                    //todo
 
                 }
                 else
                 {
-                    if (depth == 0)
-                    {
-                        Session tempc = sesions.ElementAt(temp);
-                        listBox_Data.DataSource = tempc.getMeasurement();
-                        measurements = tempc.getMeasurement();
-                        depth++;
-                    }
+                    Debug.WriteLine("aantal sessies: " + user.sessions.Count);
+                    Session tempc = user.sessions[temp];
+                    listBox1.DataSource = tempc.measurements;
+                  
 
                 }
             }
@@ -144,7 +131,7 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    listBox_Data.DataSource = sesions;
+                //    listBox_Data.DataSource = sesions;
                     depth--;
                 }
 
@@ -157,7 +144,7 @@ namespace WindowsFormsApplication1
                 }
                 else if (depth == 1)
                 {
-                    listBox_Data.DataSource = sesions;
+                 //   listBox_Data.DataSource = sesions;
                     depth--;
                 }
 

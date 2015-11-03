@@ -580,7 +580,7 @@
             // 
             // newClient
             // 
-            this.newClient.Location = new System.Drawing.Point(16, 336);
+            this.newClient.Location = new System.Drawing.Point(15, 305);
             this.newClient.Name = "newClient";
             this.newClient.Size = new System.Drawing.Size(113, 38);
             this.newClient.TabIndex = 38;

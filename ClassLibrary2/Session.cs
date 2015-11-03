@@ -12,12 +12,14 @@ namespace Network
     {
         public DateTime startedDate { get; private set; }
         public List<Measurement> measurements = new List<Measurement>();
-        public int trainingen;
+        public int training;
+        public int id;
 
-        public Session(DateTime startedDate, trainingen training)
+        public Session(DateTime startedDate, trainingen training, int id)
         {
             this.startedDate = startedDate;
-            this.trainingen = (int)training;
+            this.training = (int)training;
+            this.id = id;
         }
 
         //deserialization function
@@ -57,6 +59,11 @@ namespace Network
         {
             info.AddValue("startedDate", startedDate);
             info.AddValue("measurements", measurements);
+        }
+
+        public override string ToString()
+        {
+            return "trainingstype is: " +  (trainingen)training +  " id: " + id  + "aantal measurements: " + measurements.Count;
         }
     }
 }
