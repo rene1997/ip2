@@ -8,12 +8,14 @@ namespace Network
     {
         public string username { get; set; }
         public string password { get; set; }
+        public bool isMale { get; set; }
         public bool isOnline { get; set; }
 
-        public User (string username, string password)
+        public User (string username, string password, bool isMale)
         {
             this.username = username.ToLower();
             this.password = PasswordHash.HashPassword(password);
+            this.isMale = isMale;
         }
 
         //deserialization function
@@ -21,6 +23,7 @@ namespace Network
         {
             username = (string)info.GetValue("username", typeof(string));
             password = (string)info.GetValue("password", typeof(string));
+            isMale = (bool)info.GetValue("ismale", typeof(bool));
             isOnline = (bool)info.GetValue("isOnline", typeof(bool));
         }
 
