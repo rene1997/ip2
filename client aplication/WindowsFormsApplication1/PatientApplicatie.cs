@@ -18,6 +18,8 @@ namespace WindowsFormsApplication1
         private string username;
         private List<User> users;
         private User currentUser;
+        private bool test;
+        private int AstrandState, TimerState = 0;
 
         public FormClient(Networkconnect network, bool isPhysician, string username)
         {
@@ -429,9 +431,7 @@ namespace WindowsFormsApplication1
 
         private void BStartTraining_Click(object sender, EventArgs e)
         {
-            var a = new astrandClass(this);
-            a.setvars(currentUser.username, currentUser.isMale);
-            Thread t = new Thread(new ThreadStart(a.Method));
+            Thread t = new Thread(new ThreadStart(Astrand));
             t.IsBackground = true;
             t.Start();
         }
@@ -473,40 +473,84 @@ namespace WindowsFormsApplication1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            //AstrandState 0 = warming up, AstrandState 1 = test, AstrandState 2 = cooldown
+            TimerState++;
+            UserClient client = (UserClient)currentUser;
+            if (AstrandState == 0 && TimerState == 60)
+            {
+                int power = client.lastMeasurement().actual_power;
+                if (currentUser.isMale)
+                {
+                    power += 50;
+                }
+                else
+                {
+                    power += 25;
+                }
+                Methode2(power.ToString(), 0.ToString(), 0.ToString(), username);
+                if (client.lastMeasurement().pulse > 120 && client.lastMeasurement().pulse < 170)
+                {
+                    AstrandState ++;
+                }
+                TimerState = 0;
+            } else if (AstrandState == 1 && TimerState == (6*60))
+            {
+                TimerState = 0;
+                AstrandState ++;
+                Methode2(50.ToString(), 0.ToString(), 0.ToString(), username);
+            }
+            else if(AstrandState == 2 && TimerState == (5*60))
+            {
+                AstrandState = 0;
+                AstrandDone();
+                timer1.Stop();
+                TimerState = 0;
+            }
         }
 
-        public System.Windows.Forms.Timer GetTimer()
+        private void AstrandDone()
         {
-            return timer1;
+            test = false;
+            Toggle(true);
+        }
+
+        public void Astrand()
+        {
+            Toggle(false);
+            Methode2(50.ToString(), 0.ToString(), 0.ToString(), username);
+            timer1.Start();
+
+            this.test = true;
         }
     }
 
-    public class astrandClass
-    {
-        private FormClient form1;
-        private string usrname;
-        private System.Windows.Forms.Timer _timer;
-        private bool isMale;
+    //public class astrandClass
+    //{
+    //    private FormClient form1;
+    //    private string usrname;
+    //    private System.Windows.Forms.Timer _timer;
+    //    private bool isMale;
 
-        public astrandClass(FormClient form1)
-        {
-            this.form1 = form1;
-        }
+    //    public astrandClass(FormClient form1)
+    //    {
+    //        this.form1 = form1;
+    //    }
 
-        public void setvars(string patientname, bool male)
-        {
-            this.usrname = patientname;
-            this.isMale = male;
-        }
+    //    public void setvars(string patientname, bool male)
+    //    {
+    //        this.usrname = patientname;
+    //        this.isMale = male;
+    //    }
 
-        public void Method()
-        {
-            form1.Toggle(false);
-            this._timer = form1.GetTimer();
-            form1.chat("Astrand test is gestart", "System", usrname);
+    //    public void Method()
+    //    {
+    //        form1.Toggle(false);
+    //        this._timer = form1.GetTimer();
+    //        form1.chat("Astrand test is gestart", "System", usrname);
 
-
-        }
-    }
+    //        _timer.Start();
+    //        form1.Methode2(50.ToString(), 0.ToString(), 0.ToString(), usrname);
+            
+    //    }
+    //}
 }
