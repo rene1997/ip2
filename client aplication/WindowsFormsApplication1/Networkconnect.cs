@@ -68,9 +68,9 @@ namespace WindowsFormsApplication1
             networkCommunication.sendPacket(new PacketBikeValues(power, time, distance, username));
         }
 
-        public void sendMeasurement(Measurement measurement, string physicianName, string sessionType)
+        public void sendMeasurement(Measurement measurement, string physicianName, trainingen training)
         {
-            networkCommunication.sendPacket(new PacketMeasurement(measurement, physicianName,sessionType));
+            networkCommunication.sendPacket(new PacketMeasurement(measurement, physicianName, training));
         }
         
         public void sendChatMessage(string message, string sender, string receiver)

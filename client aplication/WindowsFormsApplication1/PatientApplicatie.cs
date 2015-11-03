@@ -18,6 +18,9 @@ namespace WindowsFormsApplication1
         private string username;
         private List<User> users;
         private User currentUser;
+        private bool isInSession = false;
+        private trainingen training = trainingen.none;
+
 
         public FormClient(Networkconnect network, bool isPhysician, string username)
         {
@@ -150,7 +153,11 @@ namespace WindowsFormsApplication1
 
         private void RefreshThread()
         {
-            network.sendMeasurement(null, ((UserClient)currentUser).physician, "Create");
+            network.sendMeasurement(null, ((UserClient)currentUser).physician, training);
+            if (training == trainingen.newAstrand)
+                training = trainingen.astrand;
+            if (training == trainingen.none)
+                training = trainingen.other;
             do
             {
                 //Set the status of connection:
@@ -169,7 +176,7 @@ namespace WindowsFormsApplication1
                     SetLabelText(requestedPowerLabel,measurement.requested_power.ToString()+" Watt");
                 }
                 //Send measurement to the server
-                network.sendMeasurement(measurement,((UserClient)currentUser).physician,"Last");
+                network.sendMeasurement(measurement,((UserClient)currentUser).physician, training);
                 Thread.Sleep(1000);
             }
             while (statusLabel.Text != "Error: connection lost");
@@ -429,6 +436,7 @@ namespace WindowsFormsApplication1
 
         private void BStartTraining_Click(object sender, EventArgs e)
         {
+            training = trainingen.newAstrand;
             var a = new astrandClass(this);
             a.setvars(currentUser.username);
             Thread t = new Thread(new ThreadStart(a.Method));
@@ -439,6 +447,7 @@ namespace WindowsFormsApplication1
         {
             network.sendBikeValues(string1, string2, string3, string4);
         }
+
 
         public void Toggle(bool state)
         {
@@ -454,7 +463,6 @@ namespace WindowsFormsApplication1
                     connectedUsers.Enabled = state;
                 });
             }
-           
         }
 
         public void chat(string text, string username, string receiver)

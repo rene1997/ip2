@@ -209,7 +209,7 @@ namespace server_application
                 try
                 {
                     User u = (User)bformatter.Deserialize(streamClient);
-                    Console.WriteLine(u.username);
+                    Console.WriteLine(u.username + " " + u.isMale);
                     if (u is UserClient)
                         users.Add((UserClient)u);
                     else if (u is Physician)

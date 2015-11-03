@@ -165,12 +165,12 @@ namespace server_application
             }
         }
 
-        public void ReceiveMeasurement(Measurement measurement, string physcianName, string sessionType)
+        public void ReceiveMeasurement(Measurement measurement, string physcianName, trainingen sessionType)
         {
             UserClient userClient = (UserClient)user;
             Console.WriteLine("measurement shizzle");
-            if (sessionType.Equals("Create"))
-                userClient.addSession(DateTime.Now);
+            if(sessionType == trainingen.newAstrand || sessionType == trainingen.none)
+                userClient.addSession(DateTime.Now, sessionType);
             else
             {
                 userClient.addMeasurement(measurement);
@@ -191,6 +191,11 @@ namespace server_application
         public void SaveData()
         {
             server.SaveAllData();
+        }
+
+        public void ReceiveMeasurement(Measurement measurement, string physcianName, string sessionType)
+        {
+            throw new NotImplementedException();
         }
     }
 }

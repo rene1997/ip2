@@ -5,15 +5,19 @@ using System.Runtime.Serialization;
 
 namespace Network
 {
+    public enum trainingen { none, astrand, newAstrand, other }
+
     [Serializable]
     public class Session 
     {
         public DateTime startedDate { get; private set; }
         public List<Measurement> measurements = new List<Measurement>();
+        public int trainingen;
 
-        public Session(DateTime startedDate)
+        public Session(DateTime startedDate, trainingen training)
         {
             this.startedDate = startedDate;
+            this.trainingen = (int)training;
         }
 
         //deserialization function

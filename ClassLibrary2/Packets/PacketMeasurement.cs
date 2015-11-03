@@ -7,18 +7,18 @@ namespace Network
     {
         public Measurement measurement { get; }
         public string physicianName { get; }
-        public string sessionType { get; }
+        public trainingen training { get; }
 
-        public PacketMeasurement(Measurement measurement, string physicianName, string sessionType)
+        public PacketMeasurement(Measurement measurement, string physicianName, trainingen training)
         {
             this.measurement = measurement;
             this.physicianName = physicianName;
-            this.sessionType = sessionType;
+            this.training = training;
         }
 
         public override void handleServerSide(ServerInterface serverInterface)
         {
-            serverInterface.ReceiveMeasurement(measurement, physicianName, sessionType);
+            serverInterface.ReceiveMeasurement(measurement, physicianName, training);
         }
     }
 }
