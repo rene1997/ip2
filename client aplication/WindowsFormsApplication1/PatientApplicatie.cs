@@ -487,17 +487,20 @@ namespace WindowsFormsApplication1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            int wattage = -1;
             //AstrandState 0 = warming up, AstrandState 1 = test, AstrandState 2 = cooldown
             TimerState++;
             UserClient client = (UserClient)currentUser;
-            if (test && ((client.lastMeasurement().rpm < 55) || (client.lastMeasurement().rpm > 65)))
+            Measurement bikeMeasurement = bike.GetMeasurement();
+            chat(bikeMeasurement.time, "system", username);
+            if (test && ((bikeMeasurement.rpm < 55) || (bikeMeasurement.rpm > 65)))
             {
                 chat("Blijft u aub rond de 60 omwentelingen per minuut fietsen", "System", username);
             }
 
             if (AstrandState == 0 && TimerState == 60)
             {
-                int power = client.lastMeasurement().actual_power;
+                int power = bikeMeasurement.actual_power;
                 if (currentUser.isMale)
                 {
                     power += 50;
@@ -507,13 +510,14 @@ namespace WindowsFormsApplication1
                     power += 25;
                 }
                 Methode2(power.ToString(), 0.ToString(), 0.ToString(), username);
-                if (client.lastMeasurement().pulse > 120 && client.lastMeasurement().pulse < 170)
+                if (bikeMeasurement.pulse > 120 && bikeMeasurement.pulse < 170)
                 {
                     AstrandState ++;
                 }
                 TimerState = 0;
             } else if (AstrandState == 1 && TimerState == (6*60))
             {
+                wattage = bikeMeasurement.actual_power;
                 TimerState = 0;
                 AstrandState ++;
                 Methode2(50.ToString(), 0.ToString(), 0.ToString(), username);
@@ -521,13 +525,24 @@ namespace WindowsFormsApplication1
             else if(AstrandState == 2 && TimerState == (5*60))
             {
                 AstrandState = 0;
-                AstrandDone();
+                AstrandDone(wattage);
                 TimerState = 0;
             }
         }
 
-        private void AstrandDone()
+        private void AstrandDone(int wattage)
         {
+            int vo2Max = 0;
+            int avgHeartBeat = -1; // todo
+
+            if(currentUser.isMale)
+                //calculate: zuurstofopname = (0.00212 x wattage * 6.12 + 0.299) / (0.769 x gemeten gemiddelde hartslag - 48.5) x 1000
+                Console.WriteLine();
+            else
+                //calculate: VO2max = (0.00193  belasting  6.12 + 0.326) / (0.769  hs - 56.1)  1000
+                Console.WriteLine();
+
+            network.sendSaveData();
             test = false;
             chat("Astrand test is voltooid", "System", username);
             Toggle(true);

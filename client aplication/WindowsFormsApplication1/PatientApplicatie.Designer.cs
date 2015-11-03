@@ -119,26 +119,26 @@
             // saveFileToolStripMenuItem
             // 
             this.saveFileToolStripMenuItem.Name = "saveFileToolStripMenuItem";
-            this.saveFileToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.saveFileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveFileToolStripMenuItem.Text = "save file";
             this.saveFileToolStripMenuItem.Click += new System.EventHandler(this.saveFileToolStripMenuItem_Click);
             // 
             // quickSaveToolStripMenuItem
             // 
             this.quickSaveToolStripMenuItem.Name = "quickSaveToolStripMenuItem";
-            this.quickSaveToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.quickSaveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.quickSaveToolStripMenuItem.Text = "quick save";
             // 
             // loadFileToolStripMenuItem
             // 
             this.loadFileToolStripMenuItem.Name = "loadFileToolStripMenuItem";
-            this.loadFileToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.loadFileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.loadFileToolStripMenuItem.Text = "load file";
             // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.quitToolStripMenuItem.Text = "quit";
             // 
             // optionsToolStripMenuItem
@@ -580,7 +580,7 @@
             // 
             // newClient
             // 
-            this.newClient.Location = new System.Drawing.Point(26, 305);
+            this.newClient.Location = new System.Drawing.Point(16, 336);
             this.newClient.Name = "newClient";
             this.newClient.Size = new System.Drawing.Size(113, 38);
             this.newClient.TabIndex = 38;

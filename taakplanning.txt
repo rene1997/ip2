@@ -1,0 +1,3 @@
+Taakverdeling:
+* gegevens terugzien (rene)
+* O2 max (jeroen)
