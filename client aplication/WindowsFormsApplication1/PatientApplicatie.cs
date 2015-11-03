@@ -476,6 +476,11 @@ namespace WindowsFormsApplication1
             //AstrandState 0 = warming up, AstrandState 1 = test, AstrandState 2 = cooldown
             TimerState++;
             UserClient client = (UserClient)currentUser;
+            if (test && ((client.lastMeasurement().rpm < 55) || (client.lastMeasurement().rpm > 65)))
+            {
+                chat("Blijft u aub rond de 60 omwentelingen per minuut fietsen", "System", username);
+            }
+
             if (AstrandState == 0 && TimerState == 60)
             {
                 int power = client.lastMeasurement().actual_power;
@@ -511,6 +516,7 @@ namespace WindowsFormsApplication1
         private void AstrandDone()
         {
             test = false;
+            chat("Astrand test is voltooid", "System", username);
             Toggle(true);
         }
 
@@ -519,7 +525,7 @@ namespace WindowsFormsApplication1
             Toggle(false);
             Methode2(50.ToString(), 0.ToString(), 0.ToString(), username);
             timer1.Start();
-
+            chat("Astrand test is gestart", "System", username);
             this.test = true;
         }
     }
