@@ -430,8 +430,9 @@ namespace WindowsFormsApplication1
         private void BStartTraining_Click(object sender, EventArgs e)
         {
             var a = new astrandClass(this);
-            a.setvars(currentUser.username);
+            a.setvars(currentUser.username, currentUser.isMale);
             Thread t = new Thread(new ThreadStart(a.Method));
+            t.IsBackground = true;
             t.Start();
         }
 
@@ -486,15 +487,17 @@ namespace WindowsFormsApplication1
         private FormClient form1;
         private string usrname;
         private System.Windows.Forms.Timer _timer;
+        private bool isMale;
 
         public astrandClass(FormClient form1)
         {
             this.form1 = form1;
         }
 
-        public void setvars(string patientname)
+        public void setvars(string patientname, bool male)
         {
             this.usrname = patientname;
+            this.isMale = male;
         }
 
         public void Method()
@@ -502,6 +505,7 @@ namespace WindowsFormsApplication1
             form1.Toggle(false);
             this._timer = form1.GetTimer();
             form1.chat("Astrand test is gestart", "System", usrname);
+
 
         }
     }
