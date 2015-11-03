@@ -64,7 +64,7 @@ namespace Network
                    "\n \trpm:" + rpm +
                    "\n \tspeed: " + speed + "  " +
                    "\n \tdistance: " + distance +
-                   "\n \trequested power: " + requested_power +
+                   "\n \trequested power: " + requested_power + "  "+
                    "\n \tenergy: " + energy + "  " +
                    "\n \tactual power: " + actual_power +
                    "\n \ttime: " + time;

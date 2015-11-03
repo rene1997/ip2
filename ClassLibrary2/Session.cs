@@ -63,7 +63,7 @@ namespace Network
 
         public override string ToString()
         {
-            return "trainingstype is: " +  (trainingen)training +  " id: " + id  + "aantal measurements: " + measurements.Count;
+            return "trainingstype is: " +  (trainingen)training +  " id: " + id  + " aantal measurements: " + measurements.Count;
         }
     }
 }

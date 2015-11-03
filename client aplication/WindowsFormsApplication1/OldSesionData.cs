@@ -37,26 +37,12 @@ namespace WindowsFormsApplication1
             {
                 UserClient a = (UserClient)user;
                 listBox_Data.DataSource = a.sessions;
-                Debug.WriteLine("aantal sessies: " + a.sessions.Count.ToString());
+                Debug.WriteLine("aantal sessies: " + a.sessions[0].ToString());
                 isPhysician = false;
             }
 
         }
 
-        private void LEnergy_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LDistance_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void OldSesionData_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void button_Exit_Click(object sender, EventArgs e)
         {
@@ -116,39 +102,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void button_Back_Click(object sender, EventArgs e)
-        {
-            if (isPhysician)
-            {
-                if (depth == 0)
-                {
-                   
-                }
-                else if (depth == 1)
-                {
-                    listBox_Data.DataSource = users;
-                    depth--;
-                }
-                else
-                {
-                //    listBox_Data.DataSource = sesions;
-                    depth--;
-                }
-
-            }
-            else
-            {
-                if (depth == 0)
-                {
-                    
-                }
-                else if (depth == 1)
-                {
-                 //   listBox_Data.DataSource = sesions;
-                    depth--;
-                }
-
-            }
-        }
+      
+        
     }
 }

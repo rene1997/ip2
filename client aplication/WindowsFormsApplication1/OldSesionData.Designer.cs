@@ -30,7 +30,6 @@
         {
             this.listBox_Data = new System.Windows.Forms.ListBox();
             this.button_Select = new System.Windows.Forms.Button();
-            this.button_Back = new System.Windows.Forms.Button();
             this.button_Exit = new System.Windows.Forms.Button();
             this.requestedPowerLabel = new System.Windows.Forms.Label();
             this.label_RequestedPower = new System.Windows.Forms.Label();
@@ -55,7 +54,7 @@
             this.listBox_Data.FormattingEnabled = true;
             this.listBox_Data.Location = new System.Drawing.Point(268, 12);
             this.listBox_Data.Name = "listBox_Data";
-            this.listBox_Data.Size = new System.Drawing.Size(540, 147);
+            this.listBox_Data.Size = new System.Drawing.Size(888, 147);
             this.listBox_Data.TabIndex = 0;
             this.listBox_Data.SelectedIndexChanged += new System.EventHandler(this.listBox_Data_SelectedIndexChanged);
             // 
@@ -68,16 +67,6 @@
             this.button_Select.Text = "Select";
             this.button_Select.UseVisualStyleBackColor = true;
             this.button_Select.Click += new System.EventHandler(this.button_Select_Click);
-            // 
-            // button_Back
-            // 
-            this.button_Back.Location = new System.Drawing.Point(12, 60);
-            this.button_Back.Name = "button_Back";
-            this.button_Back.Size = new System.Drawing.Size(235, 42);
-            this.button_Back.TabIndex = 2;
-            this.button_Back.Text = "Back";
-            this.button_Back.UseVisualStyleBackColor = true;
-            this.button_Back.Click += new System.EventHandler(this.button_Back_Click);
             // 
             // button_Exit
             // 
@@ -180,7 +169,6 @@
             this.label_Energy.Size = new System.Drawing.Size(58, 18);
             this.label_Energy.TabIndex = 36;
             this.label_Energy.Text = "Energy:";
-            this.label_Energy.Click += new System.EventHandler(this.LEnergy_Click);
             // 
             // label_Distance
             // 
@@ -192,7 +180,6 @@
             this.label_Distance.Size = new System.Drawing.Size(70, 18);
             this.label_Distance.TabIndex = 35;
             this.label_Distance.Text = "Distance:";
-            this.label_Distance.Click += new System.EventHandler(this.LDistance_Click);
             // 
             // label_CurrentPower
             // 
@@ -254,14 +241,14 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(268, 186);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(540, 212);
+            this.listBox1.Size = new System.Drawing.Size(888, 212);
             this.listBox1.TabIndex = 45;
             // 
             // OldSesionData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 420);
+            this.ClientSize = new System.Drawing.Size(1168, 409);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.requestedPowerLabel);
             this.Controls.Add(this.label_RequestedPower);
@@ -279,12 +266,10 @@
             this.Controls.Add(this.label_RoundPerMin);
             this.Controls.Add(this.label_HeartBeat);
             this.Controls.Add(this.button_Exit);
-            this.Controls.Add(this.button_Back);
             this.Controls.Add(this.button_Select);
             this.Controls.Add(this.listBox_Data);
             this.Name = "OldSesionData";
             this.Text = "Form3";
-            this.Load += new System.EventHandler(this.OldSesionData_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,7 +279,6 @@
 
         private System.Windows.Forms.ListBox listBox_Data;
         private System.Windows.Forms.Button button_Select;
-        private System.Windows.Forms.Button button_Back;
         private System.Windows.Forms.Button button_Exit;
         private System.Windows.Forms.Label requestedPowerLabel;
         private System.Windows.Forms.Label label_RequestedPower;
