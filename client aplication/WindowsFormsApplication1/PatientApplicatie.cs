@@ -23,8 +23,9 @@ namespace WindowsFormsApplication1
         private bool isInSession = false;
         private trainingen training = trainingen.none;
         private bool test;
-        private int AstrandState, TimerState = 0;
+        private int AstrandState, TimerState, wattage = 0;
         private Timer timer1 = new Timer();
+        private List<int> bpm;
 
         public FormClient(Networkconnect network, bool isPhysician, string username)
         {
@@ -487,7 +488,6 @@ namespace WindowsFormsApplication1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            int wattage = -1;
             //AstrandState 0 = warming up, AstrandState 1 = test, AstrandState 2 = cooldown
             TimerState++;
             UserClient client = (UserClient)currentUser;
@@ -496,6 +496,11 @@ namespace WindowsFormsApplication1
             if (test && ((bikeMeasurement.rpm < 55) || (bikeMeasurement.rpm > 65)))
             {
                 chat("Blijft u aub rond de 60 omwentelingen per minuut fietsen", "System", username);
+            }
+
+            if (AstrandState == 1)
+            {
+                bpm.Add(bikeMeasurement.pulse);
             }
 
             if (AstrandState == 0 && TimerState == 60)
@@ -533,15 +538,24 @@ namespace WindowsFormsApplication1
         private void AstrandDone(int wattage)
         {
             int vo2Max = 0;
-            int avgHeartBeat = -1; // todo
-
-            if(currentUser.isMale)
+            int avgHeartBeat = 0;
+            foreach (var VARIABLE in bpm)
+            {
+                avgHeartBeat += VARIABLE;
+            }
+            avgHeartBeat /= bpm.Count;
+            if (currentUser.isMale)
+            {
                 //calculate: zuurstofopname = (0.00212 x wattage * 6.12 + 0.299) / (0.769 x gemeten gemiddelde hartslag - 48.5) x 1000
-                Console.WriteLine();
+                double calc = (0.00212 * wattage * 6.12 + 0.299) / (0.769 * avgHeartBeat - 48.5) * 1000;
+                chat("VO2max = " + calc, "System", username);
+            }
             else
+            {
                 //calculate: VO2max = (0.00193  belasting  6.12 + 0.326) / (0.769  hs - 56.1)  1000
-                Console.WriteLine();
-
+                double calc = (0.00193 * wattage * 6.12 + 0.326) / (0.769 * avgHeartBeat - 56.1) * 1000;
+                chat("VO2max = " + calc, "System", username);
+            }
             network.sendSaveData();
             test = false;
             chat("Astrand test is voltooid", "System", username);
@@ -553,6 +567,8 @@ namespace WindowsFormsApplication1
         public void Astrand()
         {
             Toggle(false);
+            this.bpm = new List<int>();
+            this.wattage = 0;
             Methode2(50.ToString(), 0.ToString(), 0.ToString(), username);
             timer1.Enabled = true;
             timer1.Start();
