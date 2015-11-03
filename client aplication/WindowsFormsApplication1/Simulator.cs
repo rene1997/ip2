@@ -155,7 +155,7 @@ namespace WindowsFormsApplication1
 
 
             //generate pulse 
-            pulse = 60 + (int)(0.5 * rpm);
+            pulse = 90 + (int)(0.5 * rpm);
 
             //generate speed (km/uur)
             speed = (int)(rpm / 2.5);
