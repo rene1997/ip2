@@ -11,7 +11,7 @@ namespace Network
         public List<Session> sessions { get; }
         public string physician { get; }
         
-        public UserClient(string username, string userPassword, string physician): base(username,userPassword)
+        public UserClient(string username, string userPassword, string physician, bool isMale): base(username,userPassword, isMale)
         {
             this.physician = physician;
             sessions =  new List<Session>();
@@ -22,6 +22,15 @@ namespace Network
         {
             username = (string)info.GetValue("username", typeof(string));
             password = (string)info.GetValue("password", typeof(string));
+            try
+            {
+                isMale = (bool)info.GetValue("isMale", typeof(bool));
+            }
+            catch (Exception e)
+            {
+                isMale = true;
+            }
+            
             try
             {
                 isOnline = (bool)info.GetValue("isOnline", typeof(bool));
@@ -96,6 +105,7 @@ namespace Network
             info.AddValue("isOnline", isOnline);
             info.AddValue("physician", physician);
             info.AddValue("sessions", sessions);
+            info.AddValue("isMale", isMale);
 
         }
     }

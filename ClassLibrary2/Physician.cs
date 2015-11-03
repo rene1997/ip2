@@ -13,7 +13,7 @@ namespace Network
         // Patient van de arts
         public List<UserClient> clients = new List<UserClient>();
             
-        public Physician(String username, string password): base(username, password)
+        public Physician(String username, string password, bool isMale): base(username, password, isMale)
         {
             clients = new List<UserClient>();
         }
@@ -24,7 +24,14 @@ namespace Network
             username = (string)info.GetValue("username", typeof(string));
             password = (string)info.GetValue("password", typeof(string));
             clients = (List<UserClient>)info.GetValue("clients", typeof(List<UserClient>));
-
+            try
+            {
+                isMale = (bool)info.GetValue("isMale", typeof(bool));
+            }
+            catch (Exception e)
+            {
+                isMale = true;
+            }
         }
 
         public void addClient(UserClient client)
@@ -55,6 +62,7 @@ namespace Network
             info.AddValue("username", username);
             info.AddValue("password", password);
             info.AddValue("clients", clients);
+            info.AddValue("isMale", isMale);
         }
     }
 }

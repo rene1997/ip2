@@ -96,3 +96,16 @@ D:\CycleMasterPro2000\Video\obj\Debug\Video.Properties.Resources.resources
 D:\CycleMasterPro2000\Video\obj\Debug\Video.csproj.GenerateResource.Cache
 D:\CycleMasterPro2000\Video\obj\Debug\Video.exe
 D:\CycleMasterPro2000\Video\obj\Debug\Video.pdb
+C:\Users\rene\Documents\GitHub\ip2\Video\bin\Debug\Video.exe.config
+C:\Users\rene\Documents\GitHub\ip2\Video\bin\Debug\Video.exe
+C:\Users\rene\Documents\GitHub\ip2\Video\bin\Debug\Video.pdb
+C:\Users\rene\Documents\GitHub\ip2\Video\bin\Debug\Interop.WMPLib.dll
+C:\Users\rene\Documents\GitHub\ip2\Video\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\rene\Documents\GitHub\ip2\Video\obj\Debug\Interop.WMPLib.dll
+C:\Users\rene\Documents\GitHub\ip2\Video\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\rene\Documents\GitHub\ip2\Video\obj\Debug\Video.csproj.ResolveComReference.cache
+C:\Users\rene\Documents\GitHub\ip2\Video\obj\Debug\Video.VideoPlayer.resources
+C:\Users\rene\Documents\GitHub\ip2\Video\obj\Debug\Video.Properties.Resources.resources
+C:\Users\rene\Documents\GitHub\ip2\Video\obj\Debug\Video.csproj.GenerateResource.Cache
+C:\Users\rene\Documents\GitHub\ip2\Video\obj\Debug\Video.exe
+C:\Users\rene\Documents\GitHub\ip2\Video\obj\Debug\Video.pdb

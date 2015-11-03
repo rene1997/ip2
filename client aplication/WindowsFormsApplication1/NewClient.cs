@@ -14,6 +14,7 @@ namespace WindowsFormsApplication1
     {
         private Networkconnect network;
         private string physicianName;
+        private bool isMale = true;
 
         public NewClient(Networkconnect network, string physicianName)
         {
@@ -29,7 +30,7 @@ namespace WindowsFormsApplication1
             {
                 if(network.GetAllUsers().FindIndex(user => user.username.ToLower() == gebruikersNaam.Text.ToLower()) == -1)
                 {
-                    network.addNewClient(new Network.UserClient(gebruikersNaam.Text, password.Text,physicianName), physicianName);
+                    network.addNewClient(new Network.UserClient(gebruikersNaam.Text, password.Text,physicianName, isMale), physicianName);
 
                     MessageBox.Show("Gebruiker '"+ gebruikersNaam.Text + "' met wachtwoord '"+ password.Text + "' aangemaakt.");
                     this.Hide();
@@ -59,6 +60,16 @@ namespace WindowsFormsApplication1
             //}
             //else
             //    MessageBox.Show("Please enter a username and a password!");
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            isMale = radioButton1.Checked;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            isMale = radioButton1.Checked;
         }
     }
 }

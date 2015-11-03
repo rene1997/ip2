@@ -162,3 +162,19 @@ C:\Users\rene\Documents\GitHub\ip2\client aplication\WindowsFormsApplication1\ob
 C:\Users\rene\Documents\GitHub\ip2\client aplication\WindowsFormsApplication1\obj\Debug\Client application.csproj.ResolveComReference.cache
 C:\Users\rene\Documents\GitHub\ip2\client aplication\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\rene\Documents\GitHub\ip2\client aplication\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\rene\Documents\GitHub\ip2\client aplication\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\rene\Documents\GitHub\ip2\client aplication\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\rene\Documents\GitHub\ip2\client aplication\WindowsFormsApplication1\bin\Debug\Network.dll
+C:\Users\rene\Documents\GitHub\ip2\client aplication\WindowsFormsApplication1\bin\Debug\Video.exe
+C:\Users\rene\Documents\GitHub\ip2\client aplication\WindowsFormsApplication1\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\rene\Documents\GitHub\ip2\client aplication\WindowsFormsApplication1\bin\Debug\Interop.WMPLib.dll
+C:\Users\rene\Documents\GitHub\ip2\client aplication\WindowsFormsApplication1\bin\Debug\Network.pdb
+C:\Users\rene\Documents\GitHub\ip2\client aplication\WindowsFormsApplication1\bin\Debug\Video.pdb
+C:\Users\rene\Documents\GitHub\ip2\client aplication\WindowsFormsApplication1\obj\Debug\Client application.csprojResolveAssemblyReference.cache
+C:\Users\rene\Documents\GitHub\ip2\client aplication\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Login.resources
+C:\Users\rene\Documents\GitHub\ip2\client aplication\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.NewClient.resources
+C:\Users\rene\Documents\GitHub\ip2\client aplication\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.OldSesionData.resources
+C:\Users\rene\Documents\GitHub\ip2\client aplication\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.FormClient.resources
+C:\Users\rene\Documents\GitHub\ip2\client aplication\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.CommForm.resources
+C:\Users\rene\Documents\GitHub\ip2\client aplication\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\rene\Documents\GitHub\ip2\client aplication\WindowsFormsApplication1\obj\Debug\Client application.csproj.GenerateResource.Cache

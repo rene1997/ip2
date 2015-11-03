@@ -23,7 +23,14 @@ namespace Network
         {
             username = (string)info.GetValue("username", typeof(string));
             password = (string)info.GetValue("password", typeof(string));
-            isMale = (bool)info.GetValue("ismale", typeof(bool));
+            try
+            {
+                isMale = (bool)info.GetValue("isMale", typeof(bool));
+            }
+            catch (Exception e)
+            {
+                isMale = true;
+            }
             isOnline = (bool)info.GetValue("isOnline", typeof(bool));
         }
 
@@ -43,7 +50,7 @@ namespace Network
             info.AddValue("username", username);
             info.AddValue("password", password);
             info.AddValue("isOnline", isOnline);
-            //info.AddValue("clients", clients);
+            info.AddValue("isMale", isMale);
         }
 
         public override string ToString()
