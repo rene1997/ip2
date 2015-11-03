@@ -116,3 +116,8 @@ C:\Users\rene\Documents\GitHub\ip2\server application\bin\Debug\server applicati
 C:\Users\rene\Documents\GitHub\ip2\server application\bin\Debug\Network.dll
 C:\Users\rene\Documents\GitHub\ip2\server application\bin\Debug\Network.pdb
 C:\Users\rene\Documents\GitHub\ip2\server application\obj\Debug\server application.csprojResolveAssemblyReference.cache
+C:\Users\jeroen\Desktop\school\ip2\server application\bin\Debug\server application.exe
+C:\Users\jeroen\Desktop\school\ip2\server application\bin\Debug\server application.pdb
+C:\Users\jeroen\Desktop\school\ip2\server application\bin\Debug\Network.dll
+C:\Users\jeroen\Desktop\school\ip2\server application\bin\Debug\Network.pdb
+C:\Users\jeroen\Desktop\school\ip2\server application\obj\Debug\server application.csprojResolveAssemblyReference.cache

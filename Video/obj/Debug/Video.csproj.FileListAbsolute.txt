@@ -109,3 +109,16 @@ C:\Users\rene\Documents\GitHub\ip2\Video\obj\Debug\Video.Properties.Resources.re
 C:\Users\rene\Documents\GitHub\ip2\Video\obj\Debug\Video.csproj.GenerateResource.Cache
 C:\Users\rene\Documents\GitHub\ip2\Video\obj\Debug\Video.exe
 C:\Users\rene\Documents\GitHub\ip2\Video\obj\Debug\Video.pdb
+C:\Users\jeroen\Desktop\school\ip2\Video\obj\Debug\Interop.WMPLib.dll
+C:\Users\jeroen\Desktop\school\ip2\Video\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\jeroen\Desktop\school\ip2\Video\obj\Debug\Video.csproj.ResolveComReference.cache
+C:\Users\jeroen\Desktop\school\ip2\Video\obj\Debug\Video.VideoPlayer.resources
+C:\Users\jeroen\Desktop\school\ip2\Video\obj\Debug\Video.Properties.Resources.resources
+C:\Users\jeroen\Desktop\school\ip2\Video\obj\Debug\Video.csproj.GenerateResource.Cache
+C:\Users\jeroen\Desktop\school\ip2\Video\obj\Debug\Video.exe
+C:\Users\jeroen\Desktop\school\ip2\Video\obj\Debug\Video.pdb
+C:\Users\jeroen\Desktop\school\ip2\Video\bin\Debug\Video.exe.config
+C:\Users\jeroen\Desktop\school\ip2\Video\bin\Debug\Video.exe
+C:\Users\jeroen\Desktop\school\ip2\Video\bin\Debug\Video.pdb
+C:\Users\jeroen\Desktop\school\ip2\Video\bin\Debug\Interop.WMPLib.dll
+C:\Users\jeroen\Desktop\school\ip2\Video\bin\Debug\AxInterop.WMPLib.dll

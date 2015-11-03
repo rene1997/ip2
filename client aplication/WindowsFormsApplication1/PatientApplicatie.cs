@@ -4,7 +4,9 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.Threading;
+using System.Timers;
 using Network;
+using Timer = System.Timers.Timer;
 
 namespace WindowsFormsApplication1
 {
@@ -22,10 +24,15 @@ namespace WindowsFormsApplication1
         private trainingen training = trainingen.none;
         private bool test;
         private int AstrandState, TimerState = 0;
+        private Timer timer1 = new Timer();
 
         public FormClient(Networkconnect network, bool isPhysician, string username)
         {
             InitializeComponent();
+
+            timer1.Interval = 1000;
+            timer1.Elapsed += new ElapsedEventHandler(timer1_Tick);
+
             network.SetParent(this);
             this.isPhysician = isPhysician;
             this.network = network;
@@ -515,7 +522,6 @@ namespace WindowsFormsApplication1
             {
                 AstrandState = 0;
                 AstrandDone();
-                timer1.Stop();
                 TimerState = 0;
             }
         }
@@ -525,12 +531,15 @@ namespace WindowsFormsApplication1
             test = false;
             chat("Astrand test is voltooid", "System", username);
             Toggle(true);
+            timer1.Stop();
+            timer1.Enabled = false;
         }
 
         public void Astrand()
         {
             Toggle(false);
             Methode2(50.ToString(), 0.ToString(), 0.ToString(), username);
+            timer1.Enabled = true;
             timer1.Start();
             chat("Astrand test is gestart", "System", username);
             this.test = true;
