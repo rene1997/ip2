@@ -122,3 +122,4 @@ C:\Users\jeroen\Desktop\school\ip2\Video\bin\Debug\Video.exe
 C:\Users\jeroen\Desktop\school\ip2\Video\bin\Debug\Video.pdb
 C:\Users\jeroen\Desktop\school\ip2\Video\bin\Debug\Interop.WMPLib.dll
 C:\Users\jeroen\Desktop\school\ip2\Video\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\jeroen\Desktop\school\ip2\Video\obj\Debug\Video.csprojResolveAssemblyReference.cache

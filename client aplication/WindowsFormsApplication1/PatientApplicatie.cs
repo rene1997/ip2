@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -490,14 +491,23 @@ namespace WindowsFormsApplication1
 
         public void chat(string text, string username, string receiver)
         {
-            network.sendChatMessage(text, username, receiver);
+            if(!username.Equals("System") && receiver != null)
+                network.sendChatMessage(text, username, receiver);
+
             if (RTBChatText.InvokeRequired)
             {
                 RTBChatText.Invoke((MethodInvoker)delegate
                 {
                     RTBChatText.Text += username + ": " + text + System.Environment.NewLine;
-                    RTBChatText.SelectionStart = RTBChatText.Text.Length;
-                    RTBChatText.ScrollToCaret();
+                    try
+                    {
+                        RTBChatText.SelectionStart = RTBChatText.Text.Length;
+                        RTBChatText.ScrollToCaret();
+                    }
+                    catch (Exception)
+                    {
+                        RTBChatText.Clear();
+                    }
                 });
             }
            
@@ -509,9 +519,10 @@ namespace WindowsFormsApplication1
             TimerState++;
             UserClient client = (UserClient)currentUser;
             Measurement bikeMeasurement = bike.GetMeasurement();
-            chat(bikeMeasurement.time, "system", username);
+            //chat(bikeMeasurement.time, "System", username);
             if (test && ((bikeMeasurement.rpm < 55) || (bikeMeasurement.rpm > 65)))
             {
+                Debug.WriteLine("teweinig omwentellingen");
                 chat("Blijft u aub rond de 60 omwentelingen per minuut fietsen", "System", username);
             }
 
@@ -565,17 +576,17 @@ namespace WindowsFormsApplication1
             {
                 //calculate: zuurstofopname = (0.00212 x wattage * 6.12 + 0.299) / (0.769 x gemeten gemiddelde hartslag - 48.5) x 1000
                 double calc = (0.00212 * wattage * 6.12 + 0.299) / (0.769 * avgHeartBeat - 48.5) * 1000;
-                chat("VO2max = " + calc, "System", username);
+                chat("VO2max = " + calc, "System", null);
             }
             else
             {
                 //calculate: VO2max = (0.00193  belasting  6.12 + 0.326) / (0.769  hs - 56.1)  1000
                 double calc = (0.00193 * wattage * 6.12 + 0.326) / (0.769 * avgHeartBeat - 56.1) * 1000;
-                chat("VO2max = " + calc, "System", username);
+                chat("VO2max = " + calc, "System", null);
             }
             network.sendSaveData();
             test = false;
-            chat("Astrand test is voltooid", "System", username);
+            chat("Astrand test is voltooid", "System", "jaap");
             Toggle(true);
             timer1.Stop();
             timer1.Enabled = false;
@@ -589,7 +600,7 @@ namespace WindowsFormsApplication1
             Methode2(50.ToString(), 0.ToString(), 0.ToString(), username);
             timer1.Enabled = true;
             timer1.Start();
-            chat("Astrand test is gestart", "System", username);
+            chat("Astrand test is gestart", "System", null);
             this.test = true;
         }
     }

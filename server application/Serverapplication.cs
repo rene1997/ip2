@@ -151,6 +151,7 @@ namespace server_application
         {
             foreach(ServerClient client in ConnectedClients)
             {
+                if(username != null)
                 if (client.user.username.ToLower().Equals(username.ToLower()))
                     return client;
             }

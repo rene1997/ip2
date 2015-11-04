@@ -36,3 +36,4 @@ C:\Users\jeroen\Desktop\school\ip2\ClassLibrary2\bin\Debug\Network.dll
 C:\Users\jeroen\Desktop\school\ip2\ClassLibrary2\bin\Debug\Network.pdb
 C:\Users\jeroen\Desktop\school\ip2\ClassLibrary2\obj\Debug\Network.dll
 C:\Users\jeroen\Desktop\school\ip2\ClassLibrary2\obj\Debug\Network.pdb
+C:\Users\jeroen\Desktop\school\ip2\ClassLibrary2\obj\Debug\Network.csprojResolveAssemblyReference.cache
